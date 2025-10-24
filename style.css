@@ -1,0 +1,93 @@
+/* style.css - elegant modern design, supports LTR and RTL via .lang-ar class on body */
+:root{
+  --bg:#f7fbff;
+  --card:#ffffff;
+  --accent:#4c8bf5;
+  --muted:#6b7280;
+  --radius:12px;
+  --gap:16px;
+  --maxw:1000px;
+  --shadow: 0 6px 18px rgba(15,23,42,0.08);
+  --font-sans: 'Segoe UI', Tahoma, Helvetica, Arial, sans-serif;
+  --font-ar: 'Tajawal', 'Noto Naskh Arabic', system-ui, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;padding:24px;
+  font-family:var(--font-sans);
+  background:linear-gradient(180deg,var(--bg),#ffffff 60%);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;justify-content:center;
+}
+
+.container{
+  width:100%;max-width:var(--maxw);
+  background:transparent;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:20px;
+  box-shadow:var(--shadow);
+  margin-bottom:18px;
+}
+
+/* Header / Nav */
+.header{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+  width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7cc0ff);
+  display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;
+}
+.title h1{margin:0;font-size:20px}
+.nav{display:flex;gap:8px;align-items:center}
+.nav a{padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--accent);font-weight:600}
+.nav a.active{background:rgba(76,139,245,0.12)}
+
+/* language switch */
+.lang-switch{display:flex;gap:6px;align-items:center}
+.lang-btn{padding:6px 8px;border-radius:8px;border:1px solid transparent;cursor:pointer}
+.lang-btn.active{background:var(--accent);color:white;border-color:rgba(0,0,0,0.04)}
+
+/* Students list */
+.students ul{list-style:none;padding:0;margin:8px 0 0 0}
+.students li{padding:8px 10px;border-radius:8px;background:linear-gradient(180deg,#fff,#fbfdff);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.students .meta{font-size:13px;color:var(--muted)}
+
+/* form */
+.form-row{display:flex;gap:12px;margin-bottom:12px}
+.form-row .col{flex:1}
+label{display:block;font-weight:600;margin-bottom:6px}
+input[type="text"],select,textarea,input[type="url"]{
+  width:100%;padding:10px;border-radius:8px;border:1px solid #e6eefb;background:#fbfdff;
+}
+textarea{min-height:100px;resize:vertical}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700;border:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(76,139,245,0.12)}
+
+/* table */
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{padding:10px;border-bottom:1px solid #f1f5f9;text-align:left;font-size:14px}
+.show-details{cursor:pointer;background:#f1f8ff;border-radius:8px;padding:8px 10px;border:1px solid rgba(76,139,245,0.08);font-weight:600}
+
+/* details */
+.details{padding:12px;margin-top:8px;border-radius:8px;background:#fbfdff;border:1px dashed #e6f0ff;display:none}
+.details.open{display:block}
+
+/* responsiveness */
+@media (max-width:720px){
+  .form-row{flex-direction:column}
+}
+
+/* Arabic support (add .lang-ar to body) */
+.lang-ar{direction:rtl;font-family:var(--font-ar)}
+.lang-ar .nav a{direction:ltr}
+.lang-ar .students li{justify-content:flex-start;gap:12px}
+.lang-ar label{text-align:right}

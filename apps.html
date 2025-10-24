@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Apps - Apps</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="myFunctions.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header card">
+      <div class="brand">
+        <div class="logo">AI</div>
+        <div class="title"><h1>Apps / التطبيقات</h1></div>
+      </div>
+      <div class="nav">
+        <a href="home.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="apps.html" class="active">Apps</a>
+        <a href="add_app.html" class="btn">Add App</a>
+        <div class="lang-switch" style="margin-left:12px">
+          <button class="lang-btn" data-lang="ar">AR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>قائمة التطبيقات</h2>
+      <table class="table" id="appstable">
+    <thead>
+        <tr>
+            <th>اسم التطبيق</th>
+            <th>الشركة المصنعة</th>
+            <th>مجال الاستخدام</th>
+            <th>مجاني / غير مجاني </th>
+            <th>التفاصيل</th>
+            <th>اختيار</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ChatGpt</td>
+            <td>OpenAI</td>
+            <td>محادثات ذكية , كتابة المحتوى , التعليم</td>
+            <td>مجاني جزئياً (يوجد إصدار مدفوع)</td>
+            <td><button class="details-btn" 
+           data-url="https://openai.com/chatgpt" 
+           data-desc="ChatGPT هو نموذج لغة كبير تم تدريبه بواسطة OpenAI. يمكنه الإجابة على الأسئلة، وكتابة المقالات، والمساعدة في البرمجة، والعديد من المهام النصية الأخرى."> 
+        </button>
+        
+    </td>
+            <td><input type="checkbox"></td>
+        </tr>
+           <tr>
+    <td>GoogleAssistant</td>
+
+    <td>Google LLC</td>
+
+    <td>محركات ذكية، تكنولوجيا، إدارة المهام</td>
+    
+    <td>مجاني (مُضمّن في معظم الأجهزة)</td>
+    
+    <td>
+        <button class="details-btn" 
+           data-url="https://assistant.google.com/" 
+           data-desc="مساعد جوجل (Google Assistant) هو مساعد افتراضي ذكي يعمل بالذكاء الاصطناعي طوّرته جوجل. يتيح للمستخدمين التفاعل مع أجهزتهم عبر الأوامر الصوتية أو النصية لتنفيذ مهام متعددة مثل طرح الأسئلة، جدولة التذكيرات، تشغيل الموسيقى، وإدارة الأجهزة المنزلية الذكية.">
+        </button>
+    </td>
+    
+    <td><input type="checkbox"></td>
+
+</tr>
+ <tr>
+    <td>CanvaAI</td>
+
+    <td>Canva</td>
+
+    <td>تصميم جرافيكي، تكنولوجيا، أعمال، تسويق</td>
+    
+    <td>مجاني (مع اشتراكات مدفوعة)</td>
+    
+    <td>
+        <button class="details-btn" 
+           data-url="https://www.canva.com/" 
+           data-desc="كانفا (Canva) هي أداة تصميم جرافيكي عبر الإنترنت تتيح للمستخدمين إنشاء مجموعة واسعة من المرئيات والمنشورات. ميزات الذكاء الاصطناعي لديها تساعد في توليد الصور، تحرير الفيديو، واقتراح التصاميم بسرعة وسهولة.">
+        </button>
+    </td>
+    
+    <td><input type="checkbox"></td>
+</tr>
+<tr>
+    <td>Midjourney</td>
+
+    <td>Midjourney, Inc</td>
+
+    <td>فنون رقمية، تصميم، ذكاء اصطناعي، ترفيه</td>
+    
+    <td>مدفوع (يوجد عدد محدود من الصور التجريبية)</td>
+    
+    <td>
+        <button class="details-btn" 
+           data-url="https://www.midjourney.com/" 
+           data-desc="ميدجورني (Midjourney) هو مختبر أبحاث مستقل ومنتج لبرنامج ذكاء اصطناعي (AI) يولد صوراً من أوصاف نصية (Prompts) يتم تقديمها من قبل المستخدمين، وهو يعمل بشكل أساسي عبر خادم ديسكورد.">
+        </button>
+    </td>
+    
+    <td><input type="checkbox"></td>
+</tr>
+<tr>
+    <td>Grammarly</td>
+
+    <td>Grammarly, Inc</td>
+
+    <td>تحرير نصوص، تعليم، إنتاجية، ذكاء اصطناعي</td>
+    
+    <td>مجاني (مع اشتراك Premium مدفوع)</td>
+    
+    <td>
+        <button class="details-btn" 
+           data-url="https://www.grammarly.com/" 
+           data-desc="جرامرلي (Grammarly) هو تطبيق كتابة يعتمد على الذكاء الاصطناعي، يعمل كمساعد في التدقيق النحوي، الإملائي، وعلامات الترقيم. كما يوفر اقتراحات لتحسين الوضوح والأسلوب ونبرة الكتابة.">
+        </button>
+    </td>
+    
+    <td><input type="checkbox"></td>
+</tr>
+        </tbody>
+</table>
+
+      <div style="margin-top:10px;display:flex;gap:8px">
+        <a href="add_app.html" class="btn">Add App</a>
+        <button id="clearStorage" class="btn ghost">Clear Saved</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

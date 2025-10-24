@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Add App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="myFunctions.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header card">
+      <div class="brand">
+        <div class="logo">AI</div>
+        <div class="title"><h1 data-i18n="add_app">Add App</h1></div>
+      </div>
+      <div class="nav">
+        <a href="home.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="apps.html">Apps</a>
+        <a href="add_app.html" class="active">Add App</a>
+        <div class="lang-switch" style="margin-left:12px">
+          <button class="lang-btn" data-lang="ar">AR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>صفحة إدخال معلومات تطبيق جديد</h2>
+      <form id="addAppForm">
+        <div class="form-row">
+          <div class="col">
+            <label>اسم التطبيق (بالإنجليزية - بدون فراغات)</label>
+            <input id="appName" type="text" placeholder="e.g. ChatTool">
+          </div>
+          <div class="col">
+            <label>اسم الشركة المصنعة (بالإنجليزية)</label>
+            <input id="appCompany" type="text" placeholder="e.g. OpenAI">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col">
+            <label>الموقع الإلكتروني (URL)</label>
+            <input id="appURL" type="url" placeholder="https://example.com">
+          </div>
+          <div class="col">
+            <label>مجال الاستخدام</label>
+            <select id="appDomain">
+              <option value="">-- اختر المجال --</option>
+              <option value="E-Commerce">E-Commerce</option>
+              <option value="Education">Education</option>
+              <option value="Robotics">Robotics</option>
+              <option value="Healthcare">Healthcare</option>
+              <option value="Productivity">Productivity</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col">
+            <label>مجاني؟</label>
+            <div>
+              <label><input type="radio" name="free" value="true" checked> نعم</label>
+              <label style="margin-left:12px"><input type="radio" name="free" value="false"> لا</label>
+            </div>
+          </div>
+        </div>
+
+        <label>شرح مختصر عن التطبيق</label>
+        <textarea id="appDesc" placeholder="Brief description..."></textarea>
+
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button type="submit" class="btn">إرسال</button>
+          <button type="button" id="resetBtn" class="btn ghost">إعادة</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h4>ملاحظات تقنية</h4>
+      <ul>
+        <li>التحقق من المدخلات يتم باستخدام JavaScript ( myFunctions.js).</li>
+        <li>عند الإرسال الناجح يتم تخزين التطبيق في التخزين المحلي (localStorage) والانتقال إلى apps.html.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
